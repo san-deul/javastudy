@@ -21,10 +21,17 @@ public class MainClass {
      *      2) || : true  가 반환되면 최종 결과도 true  이므로  더 이상 동작하지 않는다.
      */
     
-    boolean a = true  && true;
-    boolean b = true  && false;
-    boolean c = false && true;
-    boolean d = false && false;
+    int n1 = 10;
+    int n2 = 20;
+    
+    
+    boolean a = n1 == 10  && n2 == 20; 
+    boolean b = n1 == 10  && n2 == 10;
+    
+    boolean c = n1 == 20  && ++n2 == 20;  
+    System.out.println(n2); // 20,  false이므로 숏서킷에 의해서 ++n2==20 코드는 실행되지 않는다.
+
+    boolean d = n1 == 20 && n2++ == 20; 
     
     System.out.println(a);
     System.out.println(b);
@@ -32,6 +39,25 @@ public class MainClass {
     System.out.println(d);
     
     
+    boolean f = n1 == 10 || n2 == 20;
+    boolean g = n1 == 10 || n2 == 10;
+    
+   System.out.println(f);
+   System.out.println(g);
+ 
+   //System.out.println(____);
+    
+   boolean f1 = n1 == 10 || n2++ == 20; // 숏 서킷(앞절이 true이기에 여기서 끝남)에 의해서 n2++ == 20 코드는 실행되지 않는다.
+   boolean g1 = n1 == 10 || ++n2 == 10; // 숏 서킷(앞절이 true이기에 여기서 끝남)에 의해서 n2++ == 20 코드는 실행되지 않는다.
+   System.out.println();
+   System.out.println(f1);
+   System.out.println(g1);
+ 
+   System.out.println("___");
+   boolean h = !(n1 == 10); //괄호묶어서 해주기
+   
+   System.out.println(h);
+   
   }
 
 }
