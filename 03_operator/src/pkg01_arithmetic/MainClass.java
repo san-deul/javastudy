@@ -16,7 +16,7 @@ public class MainClass {
     // 5 나누기 2의 연산 결과는 2.5가 아닌가?
     // casting을 이용하면 원하는 결과를 얻을 수 있다.
     
-    System.out.println((double)a / b);  // 5.0 / 2 -> 5.0 / 2.0 ->2.5.. : 실수의 경우 '/' 연산자는 나누기 결과 자체를 반환한다.
+    System.out.println((double) a / b);  // 5.0 / 2 -> 5.0 / 2.0 ->2.5.. : 실수의 경우 '/' 연산자는 나누기 결과 자체를 반환한다.
     
     
     
