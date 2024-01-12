@@ -11,14 +11,11 @@ public class Address {
   private boolean isBasicAddress;
   
   // constructor
-  public Address() { //default
+  public Address() { //default 생성자
 
   }
 
   
-
-
-
   public Address(String postCode, String roadAddress, String jibunAddress, String detailAddres, String extraAddress,
       boolean isBasicAddress) {
     super();

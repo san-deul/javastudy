@@ -24,6 +24,7 @@ public class MainClass {
     //or
     
     //정보 출력 getter
+    
     System.out.println("아이디 : " + member.getId());
     System.out.println("우편번호 : " + member.getAddress().getPostCode());
     System.out.println("도로명 : " + member.getAddress().getRoadAddress());

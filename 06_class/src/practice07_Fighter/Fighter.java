@@ -33,22 +33,21 @@ public class Fighter {
     this.hp = hp;
   }
   
-  //method
   
-  // hp 줄어들기
-  public void minusHp(String name, int hp) {
-    
-      // hp가 줄어들지 않는 경우
-      // hp가 0일때
-      if(hp <= 0) {
-        System.out.println("hp가 줄어들 수 없습니다");
-        return;
-      }
-      
-      // hp -= hp; -줄어든 hp를 어디에 담지?
+  //isAlive(
+  public boolean isAlive() {
+    return hp > 0;
   }
   
-  
+  //punch()
+  public void punch(Fighter other, int power) {
+    System.out.println(name+"의 펀치");
+    if(power >= other.getHp()) {
+      other.setHp(0);
+    }else {
+      other.setHp(other.getHp()-power);
+    }
+  }
   
   
   
