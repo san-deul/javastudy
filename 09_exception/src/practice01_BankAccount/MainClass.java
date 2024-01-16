@@ -17,10 +17,6 @@ public class MainClass {
     
     
     
-    
-    
-    
-    
     // 생성자
     BankAccount account2 = new BankAccount("01012345678",50000); //인자값 2개 생성자
     
