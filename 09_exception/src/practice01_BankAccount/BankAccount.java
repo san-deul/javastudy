@@ -44,49 +44,34 @@ public class BankAccount {
   
   public void deposit(long money) {
 
-    
     try {
-      
       if(money <= 0) {
         throw new RuntimeException(money+"원 입금 불가");
       }
-      
       balance += money; 
-      
     }catch(RuntimeException e){
-      
       System.out.println(e.getMessage());
-      
     }
-    
-    
   }
   
-  
-
   public long withdrawal(long money) {
     
     long retValue = 0L;
     
     try {
-      
       if(money <=0) {
         throw new RuntimeException(money+"원 출금불가");
       }
       if(money > balance) {
         throw new RuntimeException(money+"잔액부족");
       }
-      
       balance -= money;
       retValue = money;
-      
     }catch(RuntimeException e) {
       System.out.println(e.getMessage());
     }
-    
     return retValue;
    
-    
   }
   
   public void transfer(BankAccount account, long money) {

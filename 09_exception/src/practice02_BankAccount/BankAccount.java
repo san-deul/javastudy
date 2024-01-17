@@ -44,7 +44,6 @@ public class BankAccount {
     if(money <= 0) {
       throw new RuntimeException(money+"원 입금불가");
     }
-    
     balance += money; 
     
   }
@@ -66,12 +65,8 @@ public class BankAccount {
   }
   
   public void transfer(BankAccount account, long money) throws RuntimeException{
-   
-
     account.deposit(withdrawal(money));
     //위에서 던진것(deposit, withdrawal)들 받아야해서... 
-    
-    
   }
   
   
