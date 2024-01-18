@@ -69,7 +69,7 @@ public class MainClass {
     
     //주의사항
     // numbers는 길이를 변경할 수 없다. (추가, 삭제 불가)
-    System.out.println(numbers.toString()); 
+    System.out.println(numbers.toString());    // <???????????????????????? 얘 뭐엿지?
     System.out.println(numbers); //toString 메소드 생략가능
     
   }

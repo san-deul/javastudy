@@ -20,9 +20,6 @@ public class MainClass {
     
     // Mutable 객체(값이 변할 수 있는 객체)
     
-    
-    
-    
     // HashMap 선언 - key, value 타입 뭔지 다 정해야함.
     Map<String, Object> book;
     
@@ -40,7 +37,7 @@ public class MainClass {
     System.out.println("title: " + book.get("title"));
     System.out.println("author: " + book.get("author"));
     // System.out.println(book.get("isBestSeller") ? "베스트셀러" : "일반서적");
-    // book.get("isBestSeller") ? "베스트셀러" : "일반서적" < 오류...타입이object니까...truefalse를 담은 object일뿐,
+    // book.get("isBestSeller") ? "베스트셀러" : "일반서적" < 오류...타입이object니까...true,false를 담은 object일뿐,
     //boolean은 아님
     System.out.println((boolean)book.get("isBestSeller") ? "베스트셀러" : "일반서적");
     // 캐스팅해라 boolean으로
@@ -64,11 +61,14 @@ public class MainClass {
 
   public static void method3() {
     
-    // Key 는 Set을 되어있다.
+    // Key 는 Set으로 되어있다.
+    
+    
     
     Map<String, Object> map = Map.of("name","홍길동", "age", 10, "isMarried", false);
     
     Set<String> keys = map.keySet();
+    
     
     for(String key : keys) {
       System.out.println(key + ":" + map.get(key));
@@ -113,7 +113,7 @@ public class MainClass {
   
   
   public static void main(String[] args) {
-    method5();
+    method3();
   }
 
 }

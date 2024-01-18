@@ -1,6 +1,6 @@
 package practice03_Bus;
 
-public class Seat extends Bus {
+public class Seat {
   
  private Person person;
   
