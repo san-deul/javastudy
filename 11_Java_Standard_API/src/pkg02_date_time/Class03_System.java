@@ -26,8 +26,8 @@ public class Class03_System {  //★ 이거추천
     
     
     //String vs String 빌더연습
-    //practice01();
-    //practice02();
+    practice01();
+    practice02();
     
   }
   
@@ -51,7 +51,7 @@ public class Class03_System {  //★ 이거추천
   }
   
   
-  public static void practice02() {
+  public static void practice02() {//웬만하면 append를 이용한 이거 쓸것 ★
     
     // StringBuilder 를 이용한 문자열 연결(append 메소드)
     

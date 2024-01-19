@@ -32,7 +32,7 @@ public class Bus {
     for(int i = 0; i < LIMIT; i++) {
       Seat seat = seats.get(i);//seats.get(i) = 의자... 각좌석 
       
-      if(seat.getPerson() == null) {        
+      if(seat.getPerson() == null) {        // 사람채워줌
         seat.setPerson(person);
         numOfPerson++;
         break;

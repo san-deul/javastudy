@@ -10,9 +10,7 @@ public class Class01_String {
     String str = "a";
     str += "b";
     str += "c";
-    
     System.out.println(str);
-    
   }
 
   public static void method2() {
@@ -30,7 +28,8 @@ public class Class01_String {
   public static void method3() {
     
     // 문자열 객체 : new String("문자열");
-    // 문자열 객체는 개발자가 관리한다. -> 동일한 문자열 객체도 여러개 생성될 수 있다.
+    // 문자열 객체는 개발자가 관리한다. 
+    // -> 동일한 문자열 객체도 여러개 생성될 수 있다.
     
     String str1 = new String("a");
     String str2 = new String("a");
@@ -229,7 +228,7 @@ public class Class01_String {
     
     // 앞으로 읽어도 뒤로 읽어도 동일한 문자열 판단하기
     
-    String word = "level";
+    String word = "용용영융";
     
     
     // 1. 한 글자씩 비교하기
@@ -238,15 +237,12 @@ public class Class01_String {
            0      4     = 4
            1      3     = 4
                                                        .....5/2 몫:2
-           
        2) 6글자인 경우 비교할 문자들의 인덱스 비교
            앞     뒤
             0     5     = 5
             1     4     = 5
             2     3     = 5
-            
                                                        ............6/2 : 몫:3
-            
        3) n글자인 경우 비교할 문자들의 인덱스 비교
            앞    뒤
             i   n - i - 1
@@ -269,6 +265,7 @@ public class Class01_String {
     String reverse = ""; // 빈문자열 상태 저장
     for(int i = word.length() -1; i >= 0; i--) {
       reverse += word.charAt(i);
+      //System.out.println(reverse);
     }
     System.out.println(word.equals(reverse));
     
