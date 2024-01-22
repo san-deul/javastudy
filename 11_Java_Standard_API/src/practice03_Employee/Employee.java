@@ -1,5 +1,7 @@
 package practice03_Employee;
 
+import java.util.Objects;
+
 public class Employee {
   
   // field
@@ -42,6 +44,24 @@ public class Employee {
     System.out.println("사원번호 : " + empNo);
     System.out.println("사원명 : " + name);
   }
-  
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(empNo);
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    /*if (getClass() != obj.getClass())
+      return false; 
+      클래스 비교 코드...다른클래스로 인식해서, 지움*/
+    Employee other = (Employee) obj;
+    return empNo == other.empNo;
+  }
+  //객체간 비교할 준비가 됨..
   
 }

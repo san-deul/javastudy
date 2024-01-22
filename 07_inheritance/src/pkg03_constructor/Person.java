@@ -7,9 +7,6 @@ public class Person {
   private String name;
   
   // constructor
-
-
-
   public Person(String name) {
     super();
     this.name = name;
