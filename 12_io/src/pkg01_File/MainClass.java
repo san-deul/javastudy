@@ -36,6 +36,7 @@ public class MainClass {
     // File 객체 생성
     dir = new File("\\storage"); // 폴더이름 
     
+    
     // 디렉터리 유무에 따른 생성 / 삭제
     if(!dir.exists()) { //디렉터리가 없으면 1.not: 1, 2.== false 
       dir.mkdirs();
@@ -56,7 +57,7 @@ public class MainClass {
     }
     
     // 파일을 File 객체로 생성
-    File file = new File(dir, "sample.txt");
+    File file = new File(dir, "sample222.txt");
     
     // 파일 유무에 따른 생성/삭제
     if(file.exists()) { // 파일이 있으면
@@ -77,7 +78,7 @@ public class MainClass {
      * File 클래스 주요 메소드
      * 1. listFiles()   :  디렉터리 내의 모든 File 객체를 File[] 배열로 반환
      * 2. getName()     :  이름 반환
-     * 3. getParent()   :  저장된 디렉터리 반환 
+     * 3. getParent()   :  저장된 디렉터리 반환.. 저장된 상위폴더 경로 반환
      * 4. getPath()     :  get Parent() + getName()
      * 5. lastModified(): 최종수정일을  long타입(timestamp) 으로 반환
      * 6. length()      : 파일 크기를   long타입으로 반환(바이트 단위)
@@ -131,8 +132,9 @@ public class MainClass {
   
   public static void main(String[] args) {
 
-    practice2(new File("\\2024\\01\\22"));
+   // practice2(new File("\\2024\\01\\22"));
     
+    method3();
     
   }
   

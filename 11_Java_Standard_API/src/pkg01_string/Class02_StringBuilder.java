@@ -29,7 +29,7 @@ public class Class02_StringBuilder {
   
     // String 객체로 바꾸기
     // 1. new String(builder)
-    // 2. builder.toString() ★<웬만하면 이거쓰셈
+    // 2. builder.toString() ★ <웬만하면 이거쓰셈
     
     String result = builder.toString();
     System.out.println(result);

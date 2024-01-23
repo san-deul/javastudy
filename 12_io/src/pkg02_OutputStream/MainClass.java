@@ -63,6 +63,11 @@ public class MainClass {
     
     // 파일 출력 스트림 선언 
     FileOutputStream out = null;
+    // finally 에서 확인해주려고 , null 값을안해주면 쓰레기값이 되서
+    // try에서도 사용하고 finally에서도 사용해주려고
+    // 확인용
+   
+    // 3번에서부터는 안해줘도 됨...
     
     
     try {
@@ -89,7 +94,7 @@ public class MainClass {
       
       
     } catch (Exception e) {
-      e.printStackTrace();   //catch블록 웬만하면 비워두지 말고 채워둘것.
+      e.printStackTrace();   // catch블록 웬만하면 비워두지 말고 채워둘것.
     }
     finally {
       

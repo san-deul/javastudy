@@ -15,6 +15,7 @@ public class Class01_Date {
     //  1970년 1월 1일이 시작임 ...1970년 1월 31일
     
     System.out.println(date2);
+    
   }
 
 }
