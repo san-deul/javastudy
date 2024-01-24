@@ -27,7 +27,7 @@ public class Class03_System {  //★ 이거추천
     
     //String vs String 빌더연습
     practice01();
-    practice02();
+    //practice02();
     
   }
   

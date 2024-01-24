@@ -27,7 +27,7 @@ public class MyFileUtils {
     File destFile = new File(dest);
     
     // 원본을 읽는 버퍼링된 입력 스트림 선언
-    BufferedInputStream in =null;
+    BufferedInputStream in = null;
     
     // 복사본을 만드는 버퍼 출력 스트림 선언
     BufferedOutputStream out = null;
@@ -66,47 +66,14 @@ public class MyFileUtils {
     }
     
     
-    
   }
   
   
   // 파일 이동 메소드
   public static void fileMove(String src, String dest) {
-      
-   File srcFile = new File(src);
-   File destFile = new File(dest);
    
-   BufferedInputStream in = null;
-   BufferedOutputStream out = null;
-   
-   
-   try {
-    
-     in = new BufferedInputStream(new FileInputStream(srcFile));
-     out = new BufferedOutputStream(new FileOutputStream(destFile));
-         
-     byte[] bytes = new byte[5];
-     
-     int readByte = 0;
-     
-     while((readByte = in.read(bytes)) != -1) {
-       out.write(bytes, 0, readByte);
-     }
-     
-     srcFile.delete(); // ? 
-     
-     out.close();
-     in.close();
-     
-  } catch (IOException e) {
-    
-    e.printStackTrace();
-    
-  }
-     
-    
-    
-    
+    fileCopy(src,dest);
+    new File(src).delete();
     
   }
   

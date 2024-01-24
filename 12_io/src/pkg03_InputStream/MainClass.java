@@ -1,11 +1,15 @@
 package pkg03_InputStream;
 
 import java.io.BufferedInputStream;
+import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Iterator;
+import java.io.ObjectInputStream;
+import java.util.List;
+
+import pkg02_OutputStream.Employee;
 
 public class MainClass {
 
@@ -23,6 +27,29 @@ public class MainClass {
    * 2. 보조스트림으로 메인스트림과 함께 사용해야 한다.
    * 3. 버퍼링을 지원하므로 입력 속도가 향상된다.
    */
+  
+  
+  /*
+   * java.io.DataInputStream
+   * 1. 자바 변수로 구성된 데이터를 읽는 바이트 입력 스트림이다.
+   * 2. 보조스트림으로 메인스트림과 함께 사용해야 한다.
+   * 3. 타입 별로 전용 메소드가 존재한다. (String, int 읽어들이는 메소드가 다 따로있음)
+   * 
+   */
+  
+  /*
+   * java.io.ObjectInputStream
+   * 1. 객체로 구성된 데이터를 읽는 바이트 입력 스트림이다.
+   * 2. 보조스트림으로 메인스트림과 함께 사용해야 한다.
+   * 3. 읽은 객체는 Object 타입으로 반환되므로 객체 타입으로 캐스팅해서 사용한다.
+   *     -> IOException과 ClassNotFoundException 예외 발생할 수 있다.
+   *     -> IO와 Class 얘네는 부모자식 사이 아님, 그렇기에 순서 딱히 상관없음, 처리 따로
+   *      
+   */
+  
+  
+  
+  
 
   public static void method1() {
     //연습용
@@ -184,8 +211,88 @@ public class MainClass {
     
   }
   
+  public static void method4() {
+    
+    File dir = new File("\\storage");
+    File file = new File(dir, "sample4.dat");
+    
+    // 데이터 입력 스트림 선언
+    DataInputStream in = null;
+    
+    try {
+      
+      // 데이터 입력 스트림 생성
+      in = new DataInputStream(new FileInputStream(file));
+      
+      // 입력
+      String name = in.readUTF();        // 출력시 out.writeUTF(name) 사용 , 한글포함된 txt파일은 UTF처리
+      
+      int age = in.readInt();               // 출력시 out.writeInt(age) 사용
+      double height = in.readDouble();      // 출력시 out.writeDouble(height) 사용
+      boolean isAdult = in.readBoolean();   // 출력시 out.writeBoolean(isAdult) 사용
+      char gender = in.readChar();          // 출력시 out.writechar(gender) 사용
+      
+      // 확인
+      
+      System.out.println(name);
+      System.out.println(age);
+      System.out.println(height);
+      System.out.println(isAdult);
+      System.out.println(gender);
+      
+      // 데이터 입력 스트림 닫기
+      in.close();
+      
+    } catch (Exception e) {
+      
+      e.printStackTrace();
+    
+    }
+    
+  
+  
+  }
+  
+  public static void method5() {
+    
+    File dir = new File("\\storage");
+    File file = new File(dir, "sample5.dat");
+    
+    // 객체 입력 스트림 선언
+    ObjectInputStream in = null;
+    
+    
+    try {
+      
+      
+      // 객체 입력 스트림 생성
+      in = new ObjectInputStream(new FileInputStream(file));
+      
+      // 객체 입력
+      Employee emp1 = (Employee)in.readObject();
+      List<Employee> empList = (List<Employee>)in.readObject();
+
+      
+      System.out.println(emp1);
+      System.out.println(empList.get(0));
+      System.out.println(empList.get(1));
+      
+      // 객체 입력 스트림 닫기
+      in.close();
+      
+    } catch (IOException | ClassNotFoundException e) {
+    
+      e.printStackTrace();
+    
+    }
+    
+  
+  
+  
+  }
+  
   public static void main(String[] args) {
-    method3();
+    method5();
   }
   
 
