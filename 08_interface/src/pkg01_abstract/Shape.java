@@ -9,6 +9,19 @@ package pkg01_abstract;
  *    ->
  *    1) 익명 내부타입(Anonymous Inner Type)으로 생성할 수 있다.
  *    2) 익명 내부타입은 객체를 생성할 때 추상 메소드를 곧바로 오버라이드해서 만드는 것을 의미한다. 
+ *    
+ *    -->추가설명
+ *    shape는 는 본문이 없는 추상메소드를 가지는 인터페이스이므로
+ *    객체 생성이 불가능하지만,
+ *    정말 객체 생성을 원한다면
+ *    Shape shape = new Shape(){
+ *      @override
+ *      public void method();
+ *    }
+ *     바로 메소드를 오버라이드 해서 가지는 식으로 객체 생성 가능
+ *     ※ but 메소드가 하나일 경우에만 가능함  
+ *    
+ *   
  * 3. 형식
  *    abstract class 클래스명{ }
  */

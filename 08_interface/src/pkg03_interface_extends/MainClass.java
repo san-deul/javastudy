@@ -12,22 +12,22 @@ public class MainClass {
     
     
     Computer computer = new SmartPhone();
-    computer.powerOn();
-    computer.game();
-    ((SmartPhone) computer).call();
+    //computer.powerOn();
+    //computer.game();
+   // ((SmartPhone) computer).call();
     
     
     
     Phone phone = new SmartPhone();
-    phone.call();
-    ((SmartPhone) phone).powerOn();
-    ((SmartPhone) phone).game();
+    //phone.call();
+    //((SmartPhone) phone).powerOn();
+    //((SmartPhone) phone).game();
     
     
     SmartPhone smartPhone = new SmartPhone();
-    smartPhone.powerOn();
-    smartPhone.game();
-    smartPhone.call();
+    //smartPhone.powerOn();
+    //smartPhone.game();
+    //smartPhone.call();
     
     
   }

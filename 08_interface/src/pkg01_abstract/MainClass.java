@@ -10,7 +10,8 @@ public class MainClass {
     // 업캐스팅된 객체는 부모의 메소드만 호출할 수 있다.
     System.out.println("Name : " + shape1.getName());
     
-    // 업캐스팅된 객체의 메소드는 다운캐스팅 후 호출할 수 있다. 다운캐스팅: 다시 자신의 타입으로 바꾸겟다
+    // 업캐스팅된 객체의 메소드는 다운캐스팅 후 호출할 수 있다. 
+    // 다운캐스팅: 다시 자신의 타입으로 바꾸겟다
     if(shape1 instanceof Circle) {
       System.out.println("X : " + ((Circle) shape1).getX() );
       System.out.println("Y : " + ((Circle) shape1).getY() );
