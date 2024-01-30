@@ -228,7 +228,7 @@ public class Class01_String {
     
     // 앞으로 읽어도 뒤로 읽어도 동일한 문자열 판단하기
     
-    String word = "용용영융";
+    String word = "abba";
     
     
     // 1. 한 글자씩 비교하기

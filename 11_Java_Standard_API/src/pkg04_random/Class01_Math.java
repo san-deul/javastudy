@@ -4,6 +4,8 @@ public class Class01_Math {
 
   public static void main(String[] args) {
 
+    // ※ random 은 시드를 시간으로 고정값을 받음?
+    
     /*
      * Math.random()              0.0 <= 난수 < 1.0
      */

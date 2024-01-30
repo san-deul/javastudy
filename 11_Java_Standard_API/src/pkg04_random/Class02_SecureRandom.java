@@ -24,9 +24,8 @@ public class Class02_SecureRandom {
     // nextInt(5)     : 0 ~ 4 중 하나
     // nextInt(5) + 1 : 1 ~ 5 중 하나
 
-    int yut = secureRandom.nextInt(5) + 1 ;
+    int yut = secureRandom.nextInt(5) +1;
     System.out.println(yut);
-    
     
     
     
