@@ -36,7 +36,8 @@ public class Company {
   
   
   // 1. 고용
-  public void hire(Employee employee) throws RuntimeException { //받는 정보가 new regular아니면 new partime인거임
+  public void hire(Employee employee) throws RuntimeException { 
+    //받는 정보가 new regular아니면 new partime인거임
     // 예외발생하는 경우 null이 넘어감 ___companyHandler참고
     // optional 쓰지 않음.... <?
     if(employee != null) {

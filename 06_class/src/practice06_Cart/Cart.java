@@ -10,8 +10,6 @@ public class Cart {
   private int count;          // 카트에 담은 물건의 개수 ...index라고 생각하셈
   
   // constructor
-  
-  
   public Cart(int cartSize) {
     products = new Product[Math.min(cartSize,CART_SIZE)];
   }
